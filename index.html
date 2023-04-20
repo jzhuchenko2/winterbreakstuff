@@ -1,11 +1,135 @@
 <!DOCTYPE html>
 <html>
-    
-<h1>Example d3.js line chart</h1>
-<h2>Percentage of Workforce in Leisure/Hospital Industry in Savannah, 1990-2013</h2>
-  <div id="chart"></div>
-  <script src="yuh.js"></script>
-  <link rel="stylesheet" href="styles.css">
-<h2>Data Source: <a href="https://fred.stlouisfed.org/series/SMU13423407000000001A">Federal Reserve Bank of St. Louis</a> - By <a href="http://carlvlewis.net">Carl V. Lewis</a></h2>
-    
+    <link href="mystyle.css" rel="stylesheet" type="text/css">
+    <head>
+        <title>DocuSign</title>
+        </head>
+    <body>
+        <section>
+            <h1>Welcome to DocuSign</h1>
+        <section id="blocks">
+            <p>Discover why DocuSign is the most widely used electronic signature</p>
+            <p>Sign remotely
+                eSignature works where you do. Send and sign from virtually anywhere, on any device.</p>
+            <p>Send securely
+                Electronic signatures are more secure than paper and email attachments.</p>
+            <p>Scale as you grow
+                Whether you're sending one or one hundred contracts, eSignature makes it easy to agree.</p>
+            <p>Tap into 400+ integrations
+                Connect with other applications like Microsoft, Google, Salesforce and Workday.</p>
+        </section>
+            <div id = "inputstuff">
+                <p>Compare two names:</p>
+            
+                <p> Name 1: </p> <input id="name1" type="text" />
+
+                <p> Name 2: </p> <input id="name2" type="text" />
+
+                    <button value="compare" onclick="compareNames()"> Compare! </button>
+                    <script type="text/javascript">
+                        function compareNames(){
+                        var a=document.getElementById("name1");
+                        var b=document.getElementById("name2");
+                        var c=name1.value;
+                        var d=name2.value;
+                            alert(c==d);}
+                    </script>
+            </div>
+            <section>
+                <p id="statement5"></p>
+                <script>
+                    var statement = {
+                        first: "Identification",
+                        second : "Table",};
+                    statement.name = function() {
+                        return this.first + " and " + this.second;};
+                        document.getElementById("statement5").innerHTML ="What is the most valuable type of  " + statement.name();
+                  </script>
+                <p id="document"></p>
+            <script>
+
+                // Create an object:
+          
+                var documents = {
+                  text: "Factual",
+                  tables: "Correlation",
+                  id_type: "Driver's License",
+                  get id() {
+                    return this.id_type;
+                  },
+                  get table() {
+                    return this.tables;
+                  },
+                };
+                document.getElementById("document").innerHTML = documents.id +" and " +documents.table;
+              </script>
+              <script>
+                var documents = {
+                  text: "Literary",
+                  tables: "",
+                  id_type: "",
+                  set id(id) {
+                    this.id_type = id;
+                  },
+                  set table(table) {
+                    this.tables = table;
+                  },
+                };
+                documents.id = "Social Security Card";
+                documents.table = "Factor Analysis table";
+                document.getElementById("document").innerHTML = documents.id_type +" and "+ documents.tables;
+              </script>
+            </section>
+            
+            <section>
+            <a href="docs.jpeg">
+                <img src="docs.jpeg" alt="Document">
+              </a>
+            </section>
+        <section> 
+            <p>
+                "The cost savings, speed and convenience of DocuSign have already made a significant, positive impact on our business. DocuSign has paid for itself multiple times over."
+
+                Ericka Gorman
+                Consumer Loan Product, Product Manager at Alliant Credit Union
+            </p>
+
+        </section>
+            <!--<section>
+            <ul>
+                <li>Chocolate Cake</li>
+                <li>Reese's Cake</li>
+                <li>Carrot Cake</li>
+            </ul>
+            <a href="https://www.tasteofhome.com/collection/top-10-cake-recipes/" target="_blank">Visit Cakes!</a>
+            <img src="cakes.jfif" alt="Italian Trulli" width="200" height="233">
+            </section>
+
+            <section>
+            <ol>
+                <li>Plug computer in</li>
+                <li>Start computer</li>
+                <li>Connect to VSCODE & go wild.</li>
+            </ol>
+            <a href="https://computerinfobits.com/turn-on-a-computer/#:~:text=1%20Follow%20these%20steps%20to%20turn%20a%20computer,computer%20on..%20These%20are%20the%20absolute%20basic%20" target="_blank">Visit how to turn a computer on!</a>
+            <img src="comp.jfif" alt="Italian Trulli" width="200" height="233">
+        </section>
+
+            <section>
+            <dl>
+                <dt>Coffee</dt>
+                <dd>Drink made from roasted coffee beans.</dd>
+                <dt>Water</dt>
+                <dd>A drink from the alps of the mountain.</dd>
+            </dl>
+
+            <a href="https://www.hsph.harvard.edu/nutritionsource/food-features/coffee/" target="_blank">Visit Coffee!</a>
+            <img src="coffee.jpg" alt="Italian Trulli" width="200" height="133">
+            
+
+
+
+        </section>-->
+        </section>
+    </body>
 </html>
